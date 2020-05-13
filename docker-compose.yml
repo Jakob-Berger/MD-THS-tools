@@ -24,7 +24,7 @@ services:
 
 
 ### EPIX ########################################
-  EPIXsig:
+  EPIX:
     image: mosaicgreifswald/wildfly:18.0.1.Final-20191213
     container_name: THS_tools-epix
     links:
@@ -48,8 +48,8 @@ services:
     command: -c "./wait-for-it.sh mysql:3306 -t 120 && ./run.sh"
 
 
-### WildFly gPAS ########################################
-  wildfly:
+### gPAS ########################################
+  gPAS:
     image: mosaicgreifswald/wildfly:18.0.1.Final-20191213
     container_name: THS_tools-gpas
     links:
@@ -73,8 +73,8 @@ services:
     command: -c "./wait-for-it.sh mysql:3306 -t 120 && ./run.sh"
 
 
-### WildFly gICS ########################################
-  wildfly:
+### gICS ########################################
+  gICS:
     image: mosaicgreifswald/wildfly:18.0.1.Final-20191213
     container_name: THS_tools-gics
     links:
